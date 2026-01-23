@@ -1,0 +1,359 @@
+.booking {
+  background-color: var(--color-bg-primary);
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.info-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.info-icon {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.info-item a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.info-item a:hover {
+  color: var(--color-accent);
+}
+
+.booking-form {
+  background-color: var(--color-bg-card);
+  padding: var(--spacing-lg);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-group label {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  background-color: var(--color-bg-secondary);
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: var(--color-accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* DatePicker Styles */
+.date-picker-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-picker-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.date-picker-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 3rem;
+  background-color: var(--color-bg-secondary);
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition-fast);
+  cursor: pointer;
+}
+
+.date-picker-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.date-picker-input.error {
+  border-color: var(--color-accent);
+}
+
+.date-picker-input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+/* Custom DatePicker Calendar Styles */
+.custom-datepicker-popper {
+  z-index: 10000;
+}
+
+.custom-calendar {
+  background-color: var(--color-bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  font-family: var(--font-primary) !important;
+  padding: 1rem !important;
+}
+
+.custom-calendar .react-datepicker__header {
+  background-color: var(--color-bg-secondary) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  padding-top: 1rem !important;
+}
+
+.custom-calendar .react-datepicker__current-month {
+  color: var(--color-text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.custom-calendar .react-datepicker__day-names {
+  display: flex !important;
+  justify-content: space-around !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.custom-calendar .react-datepicker__day-name {
+  color: var(--color-text-secondary) !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  width: 2.5rem !important;
+  line-height: 2.5rem !important;
+}
+
+.custom-calendar .react-datepicker__month {
+  margin: 0 !important;
+  padding: 0.5rem 0 !important;
+}
+
+.custom-calendar .react-datepicker__week {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.custom-calendar .react-datepicker__day {
+  color: var(--color-text-primary) !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  line-height: 2.5rem !important;
+  border-radius: 0.5rem !important;
+  margin: 0.125rem !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.custom-calendar .react-datepicker__day:hover {
+  background-color: var(--color-bg-secondary) !important;
+  border-radius: 0.5rem !important;
+}
+
+.custom-calendar .react-datepicker__day--selected,
+.custom-calendar .react-datepicker__day--keyboard-selected {
+  background-color: var(--color-accent) !important;
+  color: var(--color-text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.custom-calendar .react-datepicker__day--selected:hover {
+  background-color: var(--color-accent-hover) !important;
+}
+
+.custom-calendar .react-datepicker__day--disabled {
+  color: rgba(255, 255, 255, 0.2) !important;
+  cursor: not-allowed !important;
+}
+
+.custom-calendar .react-datepicker__day--disabled:hover {
+  background-color: transparent !important;
+}
+
+.custom-calendar .react-datepicker__day--outside-month {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.custom-calendar .react-datepicker__navigation {
+  top: 1rem !important;
+}
+
+.custom-calendar .react-datepicker__navigation-icon::before {
+  border-color: var(--color-text-primary) !important;
+  border-width: 2px 2px 0 0 !important;
+}
+
+.custom-calendar .react-datepicker__navigation:hover *::before {
+  border-color: var(--color-accent) !important;
+}
+
+.custom-calendar .react-datepicker__triangle {
+  display: none !important;
+}
+
+.error-message {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+}
+
+.form-message {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.form-message.error {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.form-submit {
+  margin-top: var(--spacing-sm);
+  width: 100%;
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .booking-container {
+    gap: var(--spacing-lg);
+  }
+  
+  .info-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .booking-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .booking-form {
+    padding: var(--spacing-md);
+  }
+  
+  .info-title {
+    font-size: 1.125rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.625rem;
+    font-size: 0.95rem;
+  }
+  
+  .date-picker-input {
+    padding: 0.625rem 0.625rem 0.625rem 2.5rem;
+  }
+  
+  .date-picker-icon {
+    left: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .booking-container {
+    gap: var(--spacing-md);
+  }
+  
+  .booking-form {
+    padding: var(--spacing-sm);
+  }
+  
+  .info-item {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .date-picker-input {
+    padding: 0.5rem 0.5rem 0.5rem 2.25rem;
+  }
+}
