@@ -48,6 +48,29 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+### Vercel Deployment
+
+This project is configured for easy deployment on Vercel:
+
+1. **Connect to Vercel:**
+   - Go to [Vercel](https://vercel.com)
+   - Import your GitHub repository: `https://github.com/BeCreativeRuben/TRCarDetail.be.git`
+   - Vercel will automatically detect Vite and configure the build settings
+
+2. **Environment Variables (Optional):**
+   - If using EmailJS, add these in Vercel's project settings:
+     - `VITE_EMAILJS_PUBLIC_KEY`
+     - `VITE_EMAILJS_SERVICE_ID`
+     - `VITE_EMAILJS_TEMPLATE_ID`
+
+3. **Deploy:**
+   - Vercel will automatically deploy on every push to the `main` branch
+   - Preview deployments are created for pull requests
+
+The `vercel.json` file is already configured for optimal Vite deployment.
+
 ## Project Structure
 
 ```
